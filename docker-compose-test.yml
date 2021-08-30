@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /home/node/app/node_modules
+      - .:/home/node/app
+    stdin_open: true
+    tty: true
+    command: ["npm", "test"]
