@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t tigrin4000/course-docker-react -f Dockerfile.dev .
+  - docker build -t davidtie/course-docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true tigrin4000/course-docker-react npm run test
+  - docker run -e CI=true davidtie/course-docker-react npm run test
